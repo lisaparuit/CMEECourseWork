@@ -1,0 +1,43 @@
+##############
+# Count how many lines there are in each file
+
+find *.fasta -exec wc -l {} + 
+
+# The answer goes:
+#     27 407228326.fasta
+#    127 407228412.fasta
+#  78104 E.coli.fasta
+#  78258 total
+
+
+###########
+# Print everything starting from the second line for the E. Coli genome
+
+tail -n 78103 E.coli.fasta
+
+
+###########
+# Count the sequence length of this genome
+
+tail -n 78103 E.coli.fasta > E.coli.genome.txt | wc -m E.coli.genome.txt 
+
+### tail -n 78103 E.coli.fasta > E.coli.genome.txt ###
+# This first part creates a .txt file that contains only the genome sequence 
+### wc -m E.coli.genome.txt ###
+# The second part then counts the number of characters (wc -m) in that new file
+#
+# The answer is:
+# wc -m E.coli.genome.txt 
+
+
+############
+# Count the matches of a particular sequence, “ATGC” in the genome of E. coli (hint: Start by removing the first line and removing newline characters)
+
+grep -c ATGC E.coli.genome.txt
+
+# The answer is:
+# 18426
+
+
+############
+#Compute the AT/GC ratio. That is, the (A+T)/(G+C) ratio (as a single number). This is a summary measure of base composition of double-stranded DNA. DNA from different organisms and lineages has different ratios of the A-to-T and G-to-C base pairs (google “Chargaff’s rule”). For example, DNA from organisms that live in hot springs have a higher GC content, the GC base pair is more thermally stable.
