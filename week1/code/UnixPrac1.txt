@@ -33,11 +33,19 @@ tail -n 78103 E.coli.fasta > E.coli.genome.txt | wc -m E.coli.genome.txt
 ############
 # Count the matches of a particular sequence, “ATGC” in the genome of E. coli (hint: Start by removing the first line and removing newline characters)
 
-grep -c ATGC E.coli.genome.txt
+grep -o ATGC E.coli.genome.txt | wc -l
 
 # The answer is:
-# 18426
+# 20853
+#
+# Here I modified the command so it counts the number of mathcing ELEMENTS and not LINES...
 
 
 ############
 #Compute the AT/GC ratio. That is, the (A+T)/(G+C) ratio (as a single number). This is a summary measure of base composition of double-stranded DNA. DNA from different organisms and lineages has different ratios of the A-to-T and G-to-C base pairs (google “Chargaff’s rule”). For example, DNA from organisms that live in hot springs have a higher GC content, the GC base pair is more thermally stable.
+
+a=$(grep -o A E.coli.genome.txt | wc -l); t=$(grep -o T E.coli.genome.txt | wc -l); c=$(grep -o C E.coli.genome.txt | wc -l); g=$(grep -o G E.coli.genome.txt | wc -l); at=$((a + t)); cg=$((c + g)); echo "A count: $a"; echo "T count: $t"; echo "C count: $c"; echo "G count: $g"; echo "AT total: $at"; echo "CG total: $cg"; echo "AT/CG ratio: $(echo "scale=4; $at / $cg" | bc)"
+
+# I have to admit that I asked COpilot on that one. My initial guess was : 
+# a=$(grep -o A E.coli.genome.txt | wc -l) | t=$(grep -o T E.coli.genome.txt | wc -l) | c=$(grep -o C E.coli.genome.txt | wc -l) | g=$(grep -o G E.coli.genome.txt | wc -l) | at=$($a + $t) ; cg=$($c + $g) | expr $at / $cg
+# Where the syntax for arithmetic operation was poorly chosen.
