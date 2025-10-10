@@ -1,0 +1,5 @@
+# ignore the unmodified files
+boilerplate.sh
+variables.sh
+MyExampleScripts.sh
+
