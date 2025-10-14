@@ -1,0 +1,13 @@
+# ignore the sandbox files
+/sandbox*
+
+# ignore the learning files in /code
+/code/__pycache__/
+/code/using_name.py
+/code/sysargv.py
+/code/MyExampleScript.py
+/code/control_flow.py
+/code/boilerplate.py
+/code/debugme.py
+/code/test_control_flow.py
+
