@@ -1,5 +1,5 @@
 # ignore the sandbox files
-/sandbox*
+/sandbox/*
 
 # ignore the learning files in /code
 /code/__pycache__/

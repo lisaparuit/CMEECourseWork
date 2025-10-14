@@ -61,7 +61,7 @@ def main(argv):
     Main loop of the program
     """
     #1. Extract sequences from csv file
-    csv_path = str(input("Please provide the path to your csv file ( /!\ it should be the GENERAL path): "))
+    csv_path = str(input("Please provide the path to your csv file ( /!\ you can try /data/seqs.csv if repo is copied): "))
     seq1, seq2 = extract_seqs(csv_path)
     print(f"The two sequences to be aligned are {seq1} and {seq2}", '\n')
     #2. Order sequences by length
