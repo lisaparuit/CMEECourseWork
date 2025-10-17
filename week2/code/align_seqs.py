@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
-# Module imports 
+
+### Module imports ###
 import sys 
 import csv
 
+
+### Functions ###
+
 # extract DNA sequences from csv file where each column corresponds to one organism and lines are seauences or fragments of sequences
-def extract_seqs(csv_path):
+def extract_seqs(csv_path = "../data/seqs.csv"):
     """
     Extracts sequences from a csv file and returns them as a couple of strings.
     """
     with open(csv_path, "r") as MySeqs:
         csvread = csv.reader(MySeqs)
         content = [ row for row in csvread ] # creates a list of lists
+        print(content)
         seq1, seq2 = content[0][0].strip(), content[0][1].strip() # extracts the two sequences from the first row
         return seq1, seq2
 
@@ -55,14 +60,16 @@ def print_alignment(s1, my_best_align, StartPt):
         matching_letters += "*" if s1[i] == my_best_align[i] else " "
     return matching_letters
 
+
+### Main loop ###
 # now try to find the best match (highest score) for the two sequences
 def main(argv):
     """
     Main loop of the program
     """
     #1. Extract sequences from csv file
-    csv_path = str(input("Please provide the path to your csv file ( /!\ you can try /data/seqs.csv if repo is copied): "))
-    seq1, seq2 = extract_seqs(csv_path)
+    #csv_path = str(input("Please provide the path to your csv file ( /!\ you can try /data/seqs.csv if repo is copied): "))
+    seq1, seq2 = extract_seqs()
     print(f"The two sequences to be aligned are {seq1} and {seq2}", '\n')
     #2. Order sequences by length
     s1, s2, l1, l2 = ordered_seqs(seq1, seq2)
@@ -84,6 +91,7 @@ def main(argv):
     print(my_best_align)
     print(s1)
     print('\n',f"with score {my_best_score}")
+
 
 if (__name__ == "__main__"):
     status = main(sys.argv)
