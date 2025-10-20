@@ -1,8 +1,3 @@
 # ignore sandbox
 /sandbox/*
 
-# ignore the learning files in /code
-/code/basic_io.R
-/code/R_conditionals.R
-/code/control_flow.R
-/code/boilerplate.R
