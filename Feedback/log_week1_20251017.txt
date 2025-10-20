@@ -1,0 +1,333 @@
+======================================================================
+AUTOMATED FEEDBACK LOG
+======================================================================
+
+HOW TO READ THIS FEEDBACK:
+--------------------------
+1. This log contains detailed feedback on your code execution
+2. Each script is tested and results are shown with output and errors
+3. IMPORTANT: Read all the way to the END for a summary and debugging guidance
+4. The summary at the end will help you understand and fix any issues
+5. Scripts are run in a headless environment (no GUI applications)
+
+======================================================================
+
+Starting testing for Lisa Paruit
+
+Processing week 1
+
+Your current Git repo size is about 1.68 MiB on disk
+
+Found directories: .git, week1, week2, Feedback, week3
+Found files: README.md
+
+Processing week 1: week1
+
+Found 7 code files to test.
+
+Note: Expected file checking not performed (no FileList provided).
+Expected file checking will only be performed during final assessment.
+
+======================================================================
+Script: csvtospace.sh
+
+Contents:
+
+**********
+#!/bin/bash 
+# Arguments: 1 .csv file
+# Date: Oct 2023
+# Version: ready for submission
+
+
+if [ $# -eq 0 ] # Check a file has been provided
+then 
+    echo "I'm affraid no file was provided... "
+    exit
+elif [[ $1 != *.csv ]] #check the file is .csv
+then 
+    echo "Please provide a .csv file"
+    exit
+else
+    # Convert commas to space 
+    echo "Conversion ongoing..."
+    CSV_FILE=$1 # gets the name of the csv file
+    TXT_FILE=$(basename $1 .csv).txt # gets the root of the file name and changes .csv to .txt
+    #echo $TXT_FILE # for testing purposes
+    cat $CSV_FILE | tr -s "," "\t" >> $TXT_FILE
+    echo "You're good to go! Check the file $TXT_FILE ;)"
+fi
+exit  
+**********
+
+Output (first 500 chars):
+
+**********
+I'm affraid no file was provided... 
+
+**********
+No errors.
+======================================================================
+Script: BashCommandChallenge.sh
+
+Contents:
+
+**********
+#!/bin/bash
+# Arguments: none
+# Version: ready for submission
+
+# Original script
+echo "Original output:"
+find . -type f -exec ls -s {} \; | sort -n | head -10
+
+# First exercise: 
+find . -type f -exec ls -lh {} \; | sort -n | head -10 # -h makes sizes human-readable
+
+# Second exercise: 
+find . -type f -exec ls -lh {} + | sort -n | head -10 # when using + instead of \; , nothing is substituted when the file is null. Using it therefore makes the pipeline much faster
+
+# Third exercise:
+find . -type f | xargs ls -lh | sort -n | head -10
+# here we use xarg to use the result of find . -type f as input for the ls -lh command. The -i option ensures all files
+#
+exit
+
+**********
+
+Output (first 500 chars):
+
+**********
+Original output:
+4 ./BashCommandChallenge.sh
+4 ./ConcatenateTwoFiles.sh
+4 ./CountLines.sh
+4 ./csvtospace.sh
+4 ./.gitignore
+4 ./MyExampleScript.sh
+4 ./tabtocsv.sh
+4 ./tiff2png.sh
+4 ./UnixPrac1.txt
+-rw-rw-r-- 1 mhasoba mhasoba 2.2K Oct 17 09:49 ./UnixPrac1.txt
+-rw-rw-r-- 1 mhasoba mhasoba 296 Oct 17 09:49 ./CountLines.sh
+-rw-rw-r-- 1 mhasoba mhasoba 444 Oct 17 09:49 ./tiff2png.sh
+-rw-rw-r-- 1 mhasoba mhasoba 506 Oct 17 09:49 ./ConcatenateTwoFiles.sh
+-rw-rw-r-- 1 mhasoba mhasoba 665 Oct 17 09:49 ./
+**********
+No errors.
+======================================================================
+Script: tiff2png.sh
+
+Contents:
+
+**********
+#!bin/bash
+# Version: ready for submission
+
+f=$1 # .tif image is the first argument of the script
+
+if [ $# != 1 ] #check there is an argument
+then 
+    echo "I'm affraid no image was provided... "
+    exit
+elif [[ $f != *.tif ]] #check the file is .tif
+then 
+    echo "Please provide a .tif file"
+    exit
+else
+  for f in *.tif; 
+  do 
+    echo  "Converting $f";
+    convert "$f" "$(basename "$f" .tif).png";
+  done
+  echo "All done!"
+fi
+
+exit
+
+**********
+
+Output (first 500 chars):
+
+**********
+I'm affraid no image was provided... 
+
+**********
+No errors.
+======================================================================
+Script: ConcatenateTwoFiles.sh
+
+Contents:
+
+**********
+#!/bin/bash
+# Author: Lisa Paruit
+# Version: ready for submission
+
+# check that 2 files to merge have been provided 
+if [ $# != 2 ]
+then 
+    echo "No arguments provided. Please provide two file names."
+fi
+
+# merged file name will be merged.txt
+NEW_FILE='sandbox/merged.txt'
+
+# check the content of the two arguments (for the purpose of code testing)
+#echo "First File" | cat $1
+#echo "Second File" | cat $2
+
+# merge files
+cat $1 > $NEW_FILE
+cat $2 >> $NEW_FILE
+echo "Merged File is" | cat $NEW_FILE
+
+exit
+
+**********
+
+Output (first 500 chars):
+
+**********
+No arguments provided. Please provide two file names.
+
+**********
+Errors:
+**********
+ConcatenateTwoFiles.sh: line 19: sandbox/merged.txt: No such file or directory
+ConcatenateTwoFiles.sh: line 20: sandbox/merged.txt: No such file or directory
+cat: sandbox/merged.txt: No such file or directory
+
+**********
+======================================================================
+Script: tabtocsv.sh
+
+Contents:
+
+**********
+#!/bin/sh
+# Author: Your name <lisa.paruit25@imperial.ac.uk>
+# Script: tabtocsv.sh
+# Description: substitute the tabs in the files with comas
+#
+# Saves the output into a .csv file
+# Arguments: 1 -> tab delimited file
+# Date: Oct 2019
+
+TXT_FILE=$1 # text file is the first argument of the script
+
+if [ $# != 1 ] #check there is an argument
+then 
+    echo "I'm affraid no file was provided... "
+    exit
+elif [[ $1 != *.txt ]] #check the file is .txt
+then 
+    echo "Please provide a .txt file"
+    exit
+else
+    CSV_FILE=$(basename $TXT_FILE .txt).csv #change the .txt suffix to .csv
+    echo "Creating a coma delimited version of $TXT_FILE ..."
+    cat $TXT_FILE | tr -s "\t" "," >> $CSV_FILE
+    echo "Done!"
+fi
+
+exit 
+**********
+
+Output (first 500 chars):
+
+**********
+I'm affraid no file was provided... 
+
+**********
+No errors.
+======================================================================
+Script: MyExampleScript.sh
+
+Contents:
+
+**********
+# !/bin/sh
+
+MSG1="Hello"
+MSG2=$USER
+echo "$MSG1 $MSG2"
+echo "Hello $USER"
+echo
+
+
+#exit
+**********
+
+Output (first 500 chars):
+
+**********
+Hello mhasoba
+Hello mhasoba
+
+
+**********
+No errors.
+======================================================================
+Script: CountLines.sh
+
+Contents:
+
+**********
+#!/bin/bash
+#Author: Lisa Paruit
+#Version: ready for submission
+
+# error message if no argument is provided
+if [ $# != 1 ]
+then 
+    echo "I'm affraid no file was provided... "
+else 
+    # count lines in first argument
+    Numlines=$(wc -l < $1)
+    echo "The file $1 has $Numlines lines"
+fi
+exit
+**********
+
+Output (first 500 chars):
+
+**********
+I'm affraid no file was provided... 
+
+**********
+No errors.
+
+======================================================================
+FEEDBACK SUMMARY
+======================================================================
+
+Scripts tested: 8
+Scripts successful: 7
+Scripts with errors: 1
+Warnings/Notes: 1
+
+IMPORTANT DEBUGGING GUIDANCE:
+------------------------------
+
+Please review all warnings and errors, and your directory structure based on the above log.
+
+Ask yourself: Why did I not get these warnings or errors on my machine when I tested my code?
+Common reasons for environment differences:
+
+• File paths: Your local machine may have different directory structures
+• Dependencies: Missing packages or different versions
+• File permissions: Scripts may not be executable on the testing server
+• Case sensitivity: Linux systems are case-sensitive (your laptop may not be)
+• Working directory: Scripts may assume they run from a specific location
+• Input files: Required data files may be missing or in wrong locations
+
+Debugging steps:
+1. Test your code in a clean environment (fresh directory)
+2. Check all file paths are relative and correct
+3. Verify all required files are present and properly named
+4. Test on a case-sensitive system if possible
+5. Run your scripts from different directories to check robustness
+
+Fix these issues and test again. Good debugging skills are essential for scientific computing!
+
