@@ -12,5 +12,6 @@ Ricker <- function(N0=1, r=1, K=10, generations=50)
   }
   return (N)
 }
-
+png("../CMEECourseWork/week3/R/results/Ricker_plot.png")
 plot(Ricker(generations=10), type="l")
+dev.off()
