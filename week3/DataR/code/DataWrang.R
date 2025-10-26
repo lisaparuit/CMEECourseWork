@@ -1,13 +1,11 @@
-################################################################
-################## Wrangling the Pound Hill Dataset ############
-################################################################
+#### Wrangling the Pound Hill Dataset ####
 
 ############# Load the dataset ###############
 # header = false because the raw data don't have real headers
-MyData <- as.matrix(read.csv("../data/PoundHillData.csv", header = FALSE))
+MyData <- as.matrix(read.csv("../DataR/data/PoundHillData.csv", header = FALSE))
 
 # header = true because we do have metadata headers
-MyMetaData <- read.csv("../data/PoundHillMetaData.csv", header = TRUE, sep = ";")
+MyMetaData <- read.csv("../DataR/data/PoundHillMetaData.csv", header = TRUE, sep = ";")
 
 ############# Inspect the dataset ###############
 head(MyData)
@@ -48,3 +46,14 @@ head(MyWrangledData)
 dim(MyWrangledData)
 
 ############# Exploring the data (extend the script below)  ###############
+
+require(tidyverse)
+
+tidyverse_packages(include_self = TRUE) # show the packages in the tidyverse
+
+MyWrangledData = dplyr::as_tibble(MyWrangledData)
+glimpse(MyWrangledData)
+
+ filter(MyWrangledData, Count > 100) 
+
+aggregate(MyWrangledData$Count, list(MyWrangledData$Species), FUN = mean)
