@@ -9,7 +9,7 @@ then
 fi
 
 # merged file name will be merged.txt
-NEW_FILE='../sandbox/merged.txt'
+NEW_FILE='../results/merged.txt'
 
 # check the content of the two arguments (for the purpose of code testing)
 #echo "First File" | cat $1
