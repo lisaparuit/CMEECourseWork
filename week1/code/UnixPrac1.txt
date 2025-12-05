@@ -1,7 +1,8 @@
 ##############
 # Count how many lines there are in each file
 
-find *.fasta -exec wc -l {} + 
+
+find ../data/*.fasta -exec wc -l {} + 
 
 # The answer goes:
 #     27 407228326.fasta
@@ -13,39 +14,46 @@ find *.fasta -exec wc -l {} +
 ###########
 # Print everything starting from the second line for the E. Coli genome
 
-tail -n 78103 E.coli.fasta
+tail -n 78103 ../data/E.coli.fasta
 
 
 ###########
 # Count the sequence length of this genome
 
-tail -n 78103 E.coli.fasta > E.coli.genome.txt | wc -m E.coli.genome.txt 
+tail -n 78103 ../data/E.coli.fasta > ../data/E.coli.genome.txt && wc -m ../data/E.coli.genome.txt 
 
-### tail -n 78103 E.coli.fasta > E.coli.genome.txt ###
+#
+### tail -n 78103 E.coli.fasta > E.coli.genome.txt #
 # This first part creates a .txt file that contains only the genome sequence 
+#
 ### wc -m E.coli.genome.txt ###
-# The second part then counts the number of characters (wc -m) in that new file
+#
+# This second part then counts the number of characters (wc -m) in that new file
 #
 # The answer is:
-# wc -m E.coli.genome.txt 
+# 4764240 ../data/E.coli.genome.txt
+
 
 
 ############
 # Count the matches of a particular sequence, “ATGC” in the genome of E. coli (hint: Start by removing the first line and removing newline characters)
 
-grep -o ATGC E.coli.genome.txt | wc -l
+grep -o ATGC ../data/E.coli.genome.txt | wc -l
 
 # The answer is:
 # 20853
 #
-# Here I modified the command so it counts the number of mathcing ELEMENTS and not LINES...
+# Here I modified the command so it counts the number of matching ELEMENTS and not LINES...
 
 
 ############
 #Compute the AT/GC ratio. That is, the (A+T)/(G+C) ratio (as a single number). This is a summary measure of base composition of double-stranded DNA. DNA from different organisms and lineages has different ratios of the A-to-T and G-to-C base pairs (google “Chargaff’s rule”). For example, DNA from organisms that live in hot springs have a higher GC content, the GC base pair is more thermally stable.
 
-a=$(grep -o A E.coli.genome.txt | wc -l); t=$(grep -o T E.coli.genome.txt | wc -l); c=$(grep -o C E.coli.genome.txt | wc -l); g=$(grep -o G E.coli.genome.txt | wc -l); at=$((a + t)); cg=$((c + g)); echo "A count: $a"; echo "T count: $t"; echo "C count: $c"; echo "G count: $g"; echo "AT total: $at"; echo "CG total: $cg"; echo "AT/CG ratio: $(echo "scale=4; $at / $cg" | bc)"
+a=$(grep -o A ../data/E.coli.genome.txt | wc -l); t=$(grep -o T ../data/E.coli.genome.txt | wc -l); c=$(grep -o C ../data/E.coli.genome.txt | wc -l); g=$(grep -o G ../data/E.coli.genome.txt | wc -l); at=$((a + t)); cg=$((c + g)); echo "A count: $a"; echo "T count: $t"; echo "C count: $c"; echo "G count: $g"; echo "AT total: $at"; echo "CG total: $cg"; echo "AT/CG ratio: $(echo "scale=4; $at / $cg" | bc)"
 
-# I have to admit that I asked COpilot on that one. My initial guess was : 
+###
+# I asked Copilot for help on that one. My initial guess was : 
+#
 # a=$(grep -o A E.coli.genome.txt | wc -l) | t=$(grep -o T E.coli.genome.txt | wc -l) | c=$(grep -o C E.coli.genome.txt | wc -l) | g=$(grep -o G E.coli.genome.txt | wc -l) | at=$($a + $t) ; cg=$($c + $g) | expr $at / $cg
+#
 # Where the syntax for arithmetic operation was poorly chosen.
