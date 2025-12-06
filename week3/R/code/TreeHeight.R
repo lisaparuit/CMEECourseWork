@@ -19,14 +19,14 @@ TreeHeight <- function(degrees, distance) {
 
 MainLoop = function() {
     # read data in data frame
-    Data = read.csv("/home/lisa/Documents/CMEECourseWork/week3/data/trees.csv", header=TRUE)
+    Data = read.csv("../data/trees.csv", header=TRUE)
     # for each tree, calculate the height and store in new column Height
     Data$Height = 0
     for (i in 1:nrow(Data)) {
         Data$Height[i] = TreeHeight(Data$Angle[i], Data$Distance[i])
     }
     # write new data frame to csv
-    write.csv(Data, file="/home/lisa/Documents/CMEECourseWork/week3/results/TreeHts.csv", row.names=FALSE)
+    write.csv(Data, file="../results/TreeHts.csv", row.names=FALSE)
 }
 
 # Call main function

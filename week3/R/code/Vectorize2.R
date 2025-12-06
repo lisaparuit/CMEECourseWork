@@ -16,7 +16,7 @@ stochrick <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2,num
  return(N)
 }
 
-png("../CMEECourseWork/week3/R/results/Stochastic_Ricker_plot1.png")
+png("../results/Stochastic_Ricker_plot1.png")
 plot(stochrick(), type="l")
 dev.off()
 
@@ -44,8 +44,8 @@ stochrickvect <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2
   return(N)
 }
 
-png("../CMEECourseWork/week3/R/results/Stochastic_Ricker_plot2.png")
-plot(stochrickvect(), type="l")
+png("../results/Stochastic_Ricker_plot2.png")
+plot(stochrickvect(), type = "l")
 dev.off()
 
 print("Vectorized Stochastic Ricker takes:")
