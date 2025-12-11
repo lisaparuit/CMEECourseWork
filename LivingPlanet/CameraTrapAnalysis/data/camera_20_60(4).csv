@@ -1,0 +1,5 @@
+,Station,Species,DateTimeOriginal,Date,Time,delta.time.secs,delta.time.mins,delta.time.hours,delta.time.days,Directory,FileName,n_images
+1,DL-12,Sciurus carolinensis,2025/10/8 17:22,2025/10/8,17:22:06,0,0,0,0,D:/R/RStudio/data/DL-12output/species_subfolder/Sciurus carolinensis,101MEDIA__2025-10-08__17-22-06(1).JPG,2
+2,DL-12,Oryctolagus cuniculus,2025/10/8 18:36,2025/10/8,18:36:28,4462,74.4,1.2,0,D:/R/RStudio/data/DL-12output/species_subfolder/Oryctolagus cuniculus,101MEDIA__2025-10-08__18-36-28(1).JPG,6
+3,DL-12,Oryctolagus cuniculus,2025/10/9 2:16,2025/10/9,2:16:37,27609,460.1,7.7,0.3,D:/R/RStudio/data/DL-12output/species_subfolder/Oryctolagus cuniculus,101MEDIA__2025-10-09__02-16-37(1).JPG,6
+4,DL-12,Meles meles,2025/10/9 3:01,2025/10/9,3:01:35,2698,45,0.8,0,D:/R/RStudio/data/DL-12output/species_subfolder/Meles meles,101MEDIA__2025-10-09__03-01-35(1).JPG,11

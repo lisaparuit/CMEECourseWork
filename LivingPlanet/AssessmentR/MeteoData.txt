@@ -1,0 +1,108 @@
+###Title: Meteorological data Silwood Park, UK##General metadata#Abstract: Meteorological measurements have been collected at Silwood Park campus of Imperial College London since 1947.#Keywords: Weather station, temperature, rain, soil, air, humidity#Links: https://www.imperial.ac.uk/silwood-parkDOI: 10.5281/zenodo.14680305#Is this part of a larger study?: No#Contacts#Site manager and data contact:Name: Dr. Catalina Estrada MontesPosition: Ecological Analyst and Facility ManagerAddress: Silwood Park, Buckhurst Road, Ascot, Berkshire SL5 7PY. United KingdomOrganization: Department of Life Sciences, Imperial College LondonEmail address: c.estrada@imperial.ac.uk Web address: https://profiles.imperial.ac.uk/c.estradaFunding: Department of Life Sciences, Imperial College London##Data status and accessibility#Status: Ongoing#Latest data update: Daily#Latest archive date: Daily#Latest Metadata update: January 2025#Accessibility: Storage location at Research group space: "SilwoodLTE", Imperial College London, ICT department and https://www.konectgds.com/#Usage rights: Open access##Geographic metadata#Geographic description: A weather station located in Silwood Park Campus from Imperial College London, Buckhurst Road, Ascot, Berkshire SL5 7PY, United Kingdom.  The station from 1947 to 2009 was located in front of the Manor house. Since 2009 the station is in Hill bottom.#Bounding coordinates
+1947-2009Latitude: 51.4088Longitude:-0.64152UK National grid SU 94581 68628
+
+2009-
+Latitude: 51.41142Longitude:-0.64283UK National grid SU 94485 68918##Temporal metadata#Temporal description: Meteorological measurements have been recorded at Silwood Park since 1947. Records have been digitized since 1987. Data from other years exist as images of data sheets and ad paper format at the Hamilton building office G11 and the college archives https://www.imperial.ac.uk/admin-services/acru/#Start: 1947#End: Ongoing##Methods metadata# Equipment
+For weather station active since December 2009
+- Campbell Scientific weather station tripod CM10 -3m with a CR1000 datalogger.
+- Met One 024A wing direction sensor oriented towards true north
+- Met One 014A wind speed sensor. Three-cup anemometer that monitors horizontal wind speed for the range of 0 to 45 m s–1 with a threshold of 0.45 m s–1
+- LI-COR LI200X silicon pyranometer (Solar Radiation Sensor), Calibrated against an Eppley Precision Spectral Pyranometer to measure sun  plus sky radiation. Calibrated for the daylight spectrum (400 to 1100 nm)
+- MP100A temperature and RH probe. Thermisor sensor with temperature range -35 to 55 oC and maximum error 0.4oC. Vaisala capacitive polymer H chip RH sensor for humidity range 0 -100% changed for  EE181TEM & Humidity probe 7 Nov 2024
+- 107/108 soil temperature probe. Thermisol sensor encapsulated in an epoxy-filled aluminium housing. The 107 measures from -35° to +50°C, the 108 from -5° to +95°C.
+- Environmental Measurements Limited Aerodynamic precipitation sensor SBS1000H (357 mm diameter (1000 cm2 collector, 0.1 mm tip with internal heaters. 
+- Konect 35MB Data SIM for communication
+
+
+#Data collection: 
+
+Data collected until December 2009 included in digital files:
+Meteorological instruments in the HaHa were inside a Stevenson screen shelter. Daily readings were done at around 9:00 am. 
+-Dry bulb temperature at the time (~9 am) in degree Celsius (°C): temperature of air measured by a thermometer freely exposed to the air but shielded from radiation and moisture.
+- Wet bulb temperature at the time (~9 am) in °C: the temperature air would have if it were cooled to saturation (100% relative humidity) by the evaporation of water into it, with the latent heat being supplied by the air.  By combining the dry bulb and wet bulb temperature in a Psychrometric chart or Mollier diagram the state of the humid air can be determined. Dry and Wet temperature are used to estimate air humidity (%)
+- Maximum and Minimum temperature in 24h hours measured at ~9 am, °C.
+- Ground temperature at the time (~9 am) in °C.
+- Soil temperature at 2 inches deep at the time (~9 am) in °C.
+- Soil temperature at 4 inches deep at the time (~9 am) in °C.
+- State of soil water content observed in a bare plot next to the weather station at the time (~9 am).
+- Total rain in 24h measured at ~9 am in mm (size of rain gauge unknown).
+
+Data collected since 11th December 2009:
+From 2009 to November 2024 the Campbell Scientific weather station located at Hill bottom was connected via radio/SIM card that records meteorological measures hourly using the software "LoggerNet". LoggerNet is configured to automatically collect data from the weather station every hour at 1 minute past the hour.  The data collected is added to the comma separated text files (csv) files  D:\Met Data\CR1000_Table1.dat and CR1000_Table2.dat. and they contain the hourly and daily data respectively. 
+
+Since November 2024 data from the weather station is sent via SIM card with a subscription to KONECT:  Weather station https://app.konectgds.com
+
+Other data available:
+-Images in PDF format of paper forms with daily records summarized monthly for years: 1966-1973, 1974 (not complete), 1976 (not complete), 1977-1987, 1988 (not complete)
+-Paper forms with daily records summarized monthly for years: 1952 -1973, 1974 (not complete), 1976 (not complete), 1977-1987, 1988 (not complete). Location Silwood Park, Hamilton building G.11
+-Boxes with paper records in College archives (https://www.imperial.ac.uk/admin-services/acru/) including: 
+Main Site 1947 – 1953
+Copse Temperature 1948 -1959
+Copse Relative Humidity 1948 – 1959
+Guinness Hill 1959 – 1962
+Wind data 1964
+Sunshine Chards 1952 – 1959
+Metdata 1959 - 2008
+
+Quality control: Curation of data files and creation of metadata has been done by Catalina Estrada Montes since 2017##Data table metadata#Number of tables: 3
+#Files: SilwoodWeatherDaily1987to2009.csvSilwoodWeatherHourly.csv
+SilwoodWeatherDaily.csv
+#Format: csv, txt, pdf##File name: SilwoodWeatherDaily1987to2009.csv#Description: Records from 1987 to 2009 summarized and transcribed from paper forms. Author unknown#Size:423KB#Case sensitive: No#Number or records:8401#Number of attributes:10#Orientation: Variables (attributes) included as columns#Data table structure and attribute description:- DATE: Day measure was taken. Date DD/MM/YYYY, Min: 01/01/1987, Max 31/12/2009
+- DRY: Dry bulb temperature measured at about 9 am. Floating point. Precision: 0.0, unit degree Celsius
+- WET: Wet bulb temperature measured at about 9 am. Floating point. Precision: 0.0, unit degreeCelsius
+- MAX: Maximum air temperature in the last 24h measured at about 9 am. Floating point. Precision: 0.0, unit degree Celsius
+- MIN: Minimmun air temperature in the last 24h measured at about 9 am. Floating point. Precision: 0.0, unit degree Celsius
+- GROUND: Ground surface temperature measured at about 9 am. Floating point. Precision: 0.0, unit degree Celsius
+- TWO_INCH: Soil temperature at 2 inches deep measured at about 9 am. Floating point. Precision: 0.0, unit degree Celsius
+- FOUR_INCH: Soil temperature at 4 inches deep measured at about 9 am. Floating point. Precision: 0.0, unit degree Celsius
+- STATE: Observed state of soil water content at about 9 am. String. Nominal: DAMP, FROST, FROZEN, SNOW, WET, DRY and combinations of those or with annotations. No data recorded as NO RECORD
+- RAIN: Total rain in last 24h measured at about 9 am. Floating point. Unit milimeters
+##File name: SilwoodWeatherHourly.csv#Description: Hourly weather records from December 2009 downloaded from the Campbell Scientific weather station
+#Size: NA#Case sensitive: No#Number of records: NA#Number of attributes: 13#Orientation: Variables (attributes) included as columns#Data table structure and attribute description:- TIMESTAMP: Time the measure was recorded. Date DD/MM/YYYY hh:mm format, Min: 09/12/2009 11:00
+- RECORD: Record number. Integer, sequence, Min 1
+- PTemp_C_Avg (Deg C) [Avg]: Average hourly panel temperature. Floating point. Precision: 0.000, unit degree Celsius 
+- Air_Temp_Avg (Deg C) [Avg]: Average hourly air temperature. Floating point. Precision: 0.000, unit degree Celsius 
+- RH (%) [Smp]: Relative humidity measured at 1 min pass the hour. Floating point. Precision: 0.0, unit percentage
+- SlrW_Avg (W/m^2) [Avg]: Average hourly solar irradiance. Floating point. Precision: 0.000, unit solar radiation flux density Watts per square metre
+- SlrMJ_Tot (MJ/m^2) [Tot]: Total hourly solar irradiance. Floating point. Precision: 0.000, unit solar radiation flux density milliJoule per square metre
+- Grass_Temp_Avg (Deg C) [Avg]: Average hourly ground surface temperature. Floating point. Precision: 0.000, unit degree Celsius 
+- Soil_Temp_2in_Avg (Deg C) [Avg]: Average hourly soil temperature at 2 inches deep. Floating point. Precision: 0.000, unit degree Celsius 
+- Soil_Temp_4in_Avg (Deg C) [Avg]: Average hourly soil temperature at 4 inches deep. Floating point. Precision: 0.000, unit degree Celsius 
+- WindDir (Degrees) [Smp]: Wind direction at 1 min pass the hour. Floating point. Precision: 0.000, unit degrees of azimuth angle
+- WS_kph_Avg (kilometers/hour) [Avg]. Average hourly wing speed. Floating point. Precision: 0.000, unit kilometres per hour- Rain_mm_Tot (mm) [Tot]: Total hourly rain. Floating point. Precision: 0.0, unit milimeter
+
+##File name: SilwoodWeatherDaily.csv#Description: Daily weather records measured at 9am from December 2009 downloaded from the Campbell Scientific weather station#Size: NA#Case sensitive: No#Number or records: NA#Number of attributes: 12#Orientation: Variables (attributes) included as columns#Data table structure and attribute description:
+- TIMESTAMP: Time the measure was recorded. Date DD/MM/YYYY hh:mm format, Min: 10/12/2009 9:00
+- RECORD: Record number. Integer, sequence, Min 1
+- Air_Temp_Avg (Deg C) [Smp]: Sample of air temperature at 1 min past 9:00 am. Floating point. Precision: 0.000, unit degree Celsius 
+- RH (%) [Smp]: Relative humidity measured at 1 min pass the hour. Floating point. Precision: 0.0, unit percentage
+- Grass_Temp_Avg (Deg C) [Smp]: Sample of ground temperature at 1 min past 9:00 am. Floating point. Precision: 0.000, unit degree Celsius 
+- Soil_Temp_2in_Avg (Deg C) [Smp]: Sample of soil temperature at 2 inches deep at 1 min past 9:00 am. Floating point. Precision: 0.000, unit degree Celsius 
+- Soil_Temp_4in_Avg (Deg C) [Smp]: Sample of soil temperature at 4 inches deep at 1 min past 9:00 am. Floating point. Precision: 0.000, unit degree Celsius 
+- Air_Temp_Maxn (Deg C) [Max]: Maximun air temperature in last 24h measured at 1 min past 9:00 am. Floating point. Precision: 0.000, unit degree Celsius
+- Air_Temp_Min (Deg C) [Min]: Minimum air temperature in last 24h measured at 1 min past 9:00 am. Floating point. Precision: 0.000, unit degree Celsius
+- Grass_Temp_Max (Deg C) [Max]: Maximum ground temperature in last 24h measured at 1 min past 9:00 am. Floating point. Precision: 0.000, unit degree Celsius
+- Grass_Temp_Min (Deg C) [Min]: Minimum ground temperature in last 24h measured at 1 min past 9:00 am. Floating point. Precision: 0.000, unit degree Celsius- Rain_mm_Tot (mm) [Tot]: Total rain in last 24h measured at 1 min past 9:00 am. Floating point. Precision: 0.0, unit milimeter
+
+##Data anomalies: 
+Until 2009 data were recorded in paper and then copied into computer files. Dates were revised and corrected when wrong. 
+28/05/87 should be 28/04/87
+04/03/88 should be 04/04/88
+06/05/94 should be 06/04/95
+26/05/95 should be 26/06/95
+28/08/93 should be 28/08/96
+31/01/98 should be 31/01/99
+07/05/07 should be 07/07/05
+19/10/06 should be 19/01/06
+24/10/05 should be 24/10/06
+02/01/09 should be 02/02/09
+04/05/09 should be 04/06/09
+28/01/09 should be 28/10/09
+Only a few obvious outliers in these records were also revised and corrected in February 2017.  
+MAX 04/07/07 should be 25
+TWO_INCH AND FOUR_INCH 29/06/91 should be 14.8 and 14.3
+
+Failure in the rain gauge was noticed in July 2023 and the gauge was repaired and connected back on 26 September 2023.  It is unknown when the failure started. The last record of rain before only ‘0’ values were recorded was on 25 April 2023 but it is probable failing happen before that date. This could have happened anytime between 26 January 2023, day of last equipment check, to early April.   Daily values of rainfall between 1 April to 25 September 2023 were obtained from a rain gauge located in the garden of Old Waterfield house, Winkfield Rd, Ascot SL5 7LJ. This gauge is a 5-inch brass gauge checked at 9 am every morning. Hourly values of rain for 26 April to 25 September period were left NULL.
+
+##How to cite database: Imperial College London, & Estrada Montes, C. (2025). Weather Station records, Imperial College London, Silwood Park, UK [Data set]. Zenodo. https://doi.org/10.5281/zenodo.14680305
+##How to acknowledge dataset: Department of Life Sciences, Imperial College London.

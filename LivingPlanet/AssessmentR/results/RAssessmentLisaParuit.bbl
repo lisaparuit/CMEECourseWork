@@ -1,0 +1,76 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Fu_2013}{article}{}
+      \name{author}{4}{}{%
+        {{hash=47f2634f0173a4b9212e6b1145b80923}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Yongshuo\bibnamedelima H.},
+           giveni={Y\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=7500bac66dab32062d7ba73c2e556877}{%
+           family={Campioli},
+           familyi={C\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b32829971737a5cdc9f1d1b26f2faf76}{%
+           family={Deckmyn},
+           familyi={D\bibinitperiod},
+           given={Gaby},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c60adf890de60122b3d4ef5033405c3e}{%
+           family={Janssens},
+           familyi={J\bibinitperiod},
+           given={Ivan\bibnamedelima A.},
+           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f95052073a97b68555bdee20f64cb96}
+      \strng{fullhash}{f28139bbe3c315288af5a6456a4164d2}
+      \strng{bibnamehash}{f28139bbe3c315288af5a6456a4164d2}
+      \strng{authorbibnamehash}{f28139bbe3c315288af5a6456a4164d2}
+      \strng{authornamehash}{8f95052073a97b68555bdee20f64cb96}
+      \strng{authorfullhash}{f28139bbe3c315288af5a6456a4164d2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0168-1923}
+      \field{journaltitle}{Agricultural and Forest Meteorology}
+      \field{title}{Sensitivity of leaf unfolding to experimental warming in three temperate tree species}
+      \field{volume}{181}
+      \field{year}{2013}
+      \field{pages}{125\bibrangedash 132}
+      \range{pages}{8}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.agrformet.2013.07.016
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0168192313001962
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0168192313001962
+      \endverb
+      \keyw{Climate change,Leaf unfolding,Chilling,Forcing,Plant–climate interactions}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
