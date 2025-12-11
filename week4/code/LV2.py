@@ -5,7 +5,11 @@
 import sys
 import numpy as np 
 from scipy import integrate
-import matplotlib.pyplot as plt # I am just used to using pyplot, what's the difference?
+import matplotlib.pyplot as plt 
+import os
+
+# set working direction for check up
+os.chdir('/home/lisa/Documents/CMEECourseWork/week4/code')
 
 ## parameters
 

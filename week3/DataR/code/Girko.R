@@ -1,7 +1,7 @@
 ### combine MQB scripts 
 require(ggplot2)
 
-setwd("/home/lisa/Documents/CMEECourseWork/week3/DataR/code")
+#setwd("/home/lisa/Documents/CMEECourseWork/week3/DataR/code")
 
 
 build_ellipse <- function(hradius, vradius){ # function that returns an ellipse

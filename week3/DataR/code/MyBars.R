@@ -1,6 +1,6 @@
 require(ggplot2)
 
-setwd("/home/lisa/Documents/CMEECourseWork/week3/DataR/code")
+#etwd("home/lisa/Documents/CMEECourseWork/week3/DataR/code")
 
 ### Load table
 a = read.table('../data/Results.txt', header = TRUE)

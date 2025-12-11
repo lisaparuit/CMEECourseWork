@@ -3,7 +3,7 @@ require(ggplot2)
 require(tidyverse)
 
 #setwd to test exectution
-setwd("/home/lisa/Documents/CMEECourseWork/week3/DataR/code")
+#setwd("/home/lisa/Documents/CMEECourseWork/week3/DataR/code")
 
 # Load data
 MyDF <- as.data.frame(read.csv("../data/EcolArchives-E089-51-D1.csv"))

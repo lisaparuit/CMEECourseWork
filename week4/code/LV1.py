@@ -5,6 +5,12 @@ import sys
 import numpy as np 
 from scipy import integrate
 import matplotlib.pyplot as plt # I am just used to using pyplot, what's the difference?
+import os
+
+# set working direction for check up
+#os.chdir('/home/lisa/Documents/CMEECourseWork/week4/code')
+
+
 
 ## parameters
 r, a, z, e = 1, 0.1, 1.5, 0.75 

@@ -1,5 +1,6 @@
 #! /usr/bin/env Rscript
-setwd("/home/lisa/Documents/CMEECourseWork/week3/R/code")
+# setwd to test execution
+#setwd("/home/lisa/Documents/CMEECourseWork/week3/R/code")
 
 rm(list=ls())
 

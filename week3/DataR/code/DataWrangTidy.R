@@ -2,7 +2,7 @@
 
 require(tidyverse)
 
-setwd("/home/lisa/Documents/CMEECourseWork/week3/DataR/code")
+#setwd("/home/lisa/Documents/CMEECourseWork/week3/DataR/code")
 
 ####1. Load the dataset 
 # header = false because the raw data don't have real headers

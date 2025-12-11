@@ -1,4 +1,4 @@
-#!/usr/bin/python3 script
+#!/usr/bin/python3
 
 ## module imports
 
