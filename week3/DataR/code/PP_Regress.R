@@ -2,8 +2,11 @@
 require(ggplot2)
 require(tidyverse)
 
+#setwd to test exectution
+setwd("/home/lisa/Documents/CMEECourseWork/week3/DataR/code")
+
 # Load data
-MyDF <- as.data.frame(read.csv("../DataR/data/EcolArchives-E089-51-D1.csv"))
+MyDF <- as.data.frame(read.csv("../data/EcolArchives-E089-51-D1.csv"))
 
 # Convert mg to g and adjust mass values
 MyDF$Prey.mass[MyDF$Prey.mass.unit == "mg"] <- MyDF$Prey.mass[MyDF$Prey.mass.unit == "mg"] / 1000
@@ -12,8 +15,19 @@ MyDF$Prey.mass.unit[MyDF$Prey.mass.unit == "mg"] <- "g"
 # subset
 MyDFSubset = MyDF %>% select(Predator.mass, Prey.mass, Predator.lifestage, Type.of.feeding.interaction)
 
-# linear model plot
 
+# linear model plot
+# check combinations of Type.of.feeding.interaction and Predator.lifestage counts
+group_counts <- MyDFSubset %>%
+  group_by(Type.of.feeding.interaction, Predator.lifestage) %>%
+  summarize(n = n(), .groups = 'drop') %>%
+  filter(n >= 3)
+
+# remove combinations with less than 10 data points
+MyDFSubset <- MyDFSubset %>%
+  semi_join(group_counts, by = c("Type.of.feeding.interaction", "Predator.lifestage"))
+
+# plot with ggplot2
 p <- ggplot(MyDFSubset, aes(x = log10(Prey.mass), y = log10(Predator.mass), color = Predator.lifestage)) + # overall axis and plot settings
     geom_point(shape = I(3)) + # point settings
     geom_smooth(method = "lm", se = TRUE, fullrange = TRUE) + # regression lines with confidence intervals
@@ -26,7 +40,7 @@ p <- ggplot(MyDFSubset, aes(x = log10(Prey.mass), y = log10(Predator.mass), colo
     scale_y_continuous(labels = scales::scientific)
 
 # save plot
-ggsave("../DataR/results/PP_Regress_Results.pdf", plot = p, width = 4, height = 12)
+ggsave("../results/PP_Regress_Results.pdf", plot = p, width = 4, height = 12)
  
 ### save regression results in csv file
 
@@ -77,5 +91,5 @@ for (i in unique(MyDFSubset$Type.of.feeding.interaction)) {
 }
 
 # save in csv file
-write.csv(as.data.frame(all_results), "../DataR/results/PP_Regress_Results.csv")
-dir("../DataR/results/PP_Regress_Results.csv")
+write.csv(as.data.frame(all_results), "../results/PP_Regress_Results.csv")
+dir("../results/PP_Regress_Results.csv")

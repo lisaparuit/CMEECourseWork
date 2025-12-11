@@ -2,13 +2,14 @@
 
 require(tidyverse)
 
+setwd("/home/lisa/Documents/CMEECourseWork/week3/DataR/code")
+
 ####1. Load the dataset 
 # header = false because the raw data don't have real headers
-MyData = as_tibble(read_csv ("../DataR/data/PoundHillData.csv", col_names = FALSE))
+MyData = as_tibble(read_csv ("../data/PoundHillData.csv", col_names = FALSE, show_col_types = FALSE))
 
 # header = true because we do have metadata headers
-MyMetaData = as_tibble(read_csv ("../DataR/data/PoundHillMetaData.csv", col_names = TRUE))
-
+MyMetaData = as_tibble(read_csv ("../data/PoundHillMetaData.csv", col_names = TRUE, show_col_types = FALSE))
 
 ############# Transpose ###############
 # To get those species into columns and treatments into rows 

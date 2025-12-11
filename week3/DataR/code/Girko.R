@@ -1,6 +1,8 @@
 ### combine MQB scripts 
 require(ggplot2)
 
+setwd("/home/lisa/Documents/CMEECourseWork/week3/DataR/code")
+
 
 build_ellipse <- function(hradius, vradius){ # function that returns an ellipse
   npoints = 250
@@ -39,4 +41,4 @@ p <- p + geom_polygon(data = ellDF, aes(x = Real, y = Imaginary, alpha = 1/20, f
 
 
 ### save as pdf
-ggsave("../DataR/results/Girko.pdf", plot = p)
+ggsave("../results/Girko.pdf", plot = p)

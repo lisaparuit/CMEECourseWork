@@ -1,10 +1,13 @@
 require(ggplot2)
 
+setwd("/home/lisa/Documents/CMEECourseWork/week3/DataR/code")
+
 ### Load table
-a = read.table('../DataR/data/Results.txt', header = TRUE)
+a = read.table('../data/Results.txt', header = TRUE)
+# Remove NA to prevent warning message
+a <- a %>% filter(!is.na(x) & !is.na(y1) & !is.na(y2) & !is.na(y3) & !is.na(Label))
 
 ### Copied scripts
-
 a$ymin <- rep(0, dim(a)[1]) # append a column of zeros
 
 # Print the first linerange
@@ -49,4 +52,4 @@ p <- p + scale_x_continuous("My x axis",
                             theme(legend.position = "none") 
 
 ### save as pdf
-ggsave("../DataR/results/MyBars.pdf", plot = p, width = 6, height = 4)
+ggsave("../results/MyBars.pdf", plot = p, width = 6, height = 4)
