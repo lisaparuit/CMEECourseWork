@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Bootcamp_Assessment_LisaParuit_lp425</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Bootcamp_Assessment_LisaParuit_lp425</h1>
+</header>
+<h1 id="bootcamp-assessment-lisa-paruit">Bootcamp Assessment: Lisa
+Paruit</h1>
+<h3 id="expected-scripts">Expected scripts</h3>
+<ul>
+<li>18 expected scripts are missing (16 taught, 2 assigned).uts”
+list.</li>
+</ul>
+<h2 id="execution-results">Execution results</h2>
+<p>Evidence (from LOG): - Scripts executed: 52 (visible execution
+blocks) - Successful runs (exit code 0): 47 - Failed runs (non-zero
+exit): 5<br />
+- <code>PP_Regress_loc.R</code> (R parse error) - <code>MyBars.R</code>
+(missing pipe operator <code>%&gt;%</code>) - <code>plotLin.R</code>
+(absolute <code>setwd()</code> fails on assessor machine) -
+<code>LV1.py</code>, <code>LV2.py</code> (missing <code>numpy</code> in
+environment)</p>
+<ul>
+<li><h2
+id="several-failures-are-environmentportability-issues-e.g.-setwd-to-a-local-path-python-dependency-not-available-in-headless-validator.">Several
+failures are <strong>environment/portability</strong> issues (e.g.,
+<code>setwd()</code> to a local path; Python dependency not available in
+headless validator).</h2></li>
+</ul>
+<h2 id="script-specific-feedback">Script-Specific Feedback</h2>
+<blockquote>
+<p>Representative scripts chosen to cover: strong examples, assigned
+scripts, execution issues, and common style/robustness problems.</p>
+</blockquote>
+<h3 id="tautocorr.r">TAutoCorr.R</h3>
+<p>Status: Present; executed successfully (exit code 0)</p>
+<p>Evidence (from LOG): - Exit code: 0 - Output validation: Script
+prints observed correlation and permutation p-values; writes
+<code>../results/TAutoCorr_results.txt</code> and
+<code>../results/TAutoCorr_histogram.pdf</code></p>
+<p>Rubric relevance: - Criterion 2, 3, 8, 9, 10, 11</p>
+<ul>
+<li>Strong, specification-aligned implementation of the required
+permutation test for lag-1 autocorrelation, with clear guard clauses and
+reproducible randomness.</li>
+</ul>
+<hr />
+<h3 id="pp_regress_loc.r">PP_Regress_loc.R</h3>
+<p>Status: Present but not validated (execution failed)</p>
+<p>Evidence (from LOG): - Exit code: 1 - Errors:
+<code>Error: unexpected symbol in "PP &lt;- read.csv(pp_data_path .."</code></p>
+<p>Rubric relevance: - Criterion 2, 3, 8, 9</p>
+<ul>
+<li>The script is structurally close to a correct grouped regression
+workflow (data cleaning → grouping → model fitting → CSV output), but
+contains a small syntax typo (<code>..</code>) that prevents
+execution.</li>
+</ul>
+<p>Improvement suggestion: - Fix the CSV read line to
+<code>PP &lt;- read.csv(pp_data_path, stringsAsFactors = FALSE)</code>
+and re-run; consider adding a quick
+<code>file.exists(pp_data_path)</code> guard.</p>
+<hr />
+<h3 id="plotlin.r">plotLin.R</h3>
+<p>Status: Present but not validated (execution failed due to
+portability)</p>
+<p>Evidence (from LOG): - Exit code: 1 - Errors:
+<code>setwd("/home/lisa/Documents/...")</code> cannot change working
+directory on assessor machine</p>
+<p>Rubric relevance: - Criterion 2, 8, 9</p>
+<ul>
+<li>Likely correct logic, but hard-coded absolute paths break
+reproducibility. This is a common bootcamp-stage mistake.</li>
+</ul>
+<p>Improvement suggestion: - Remove <code>setwd()</code> and use
+relative paths (or build paths from <code>file.path()</code>), matching
+the repository structure.</p>
+<hr />
+<h3 id="mybars.r">MyBars.R</h3>
+<p>Status: Present but not validated (execution failed)</p>
+<p>Evidence (from LOG): - Exit code: 1 - Errors:
+<code>could not find function "%&gt;%"</code></p>
+<p>Rubric relevance: - Criterion 2, 3, 8, 9</p>
+<ul>
+<li>Indicates the script uses a tidyverse pipeline but does not load the
+package providing <code>%&gt;%</code> (typically <code>magrittr</code>
+or <code>dplyr</code>).</li>
+</ul>
+<p>Improvement suggestion: - Add <code>library(dplyr)</code> or
+<code>library(magrittr)</code> at the top, or replace
+<code>%&gt;%</code> with base R equivalents.</p>
+<hr />
+<h3 id="lv1.py">LV1.py</h3>
+<p>Status: Present but not validated (execution failed due to
+environment dependency)</p>
+<p>Evidence (from LOG): - Exit code: 1 - Error:
+<code>ModuleNotFoundError: No module named 'numpy'</code> - Tool
+warnings: <code>SyntaxWarning: invalid escape sequence</code> in
+docstrings</p>
+<p>Rubric relevance: - Criterion 2, 3, 8, 9</p>
+<ul>
+<li>The script appears to implement plotting/simulation logic, but
+depends on <code>numpy</code>, which was not available in the headless
+validator environment.</li>
+</ul>
+<p>Improvement suggestion: - Add a <code>requirements.txt</code> (or
+README note) listing dependencies; ensure docstrings don’t include
+unescaped backslashes (use raw strings like <code>r"..."</code> or
+escape backslashes).</p>
+<hr />
+<h3 id="align_seqs_better.py">align_seqs_better.py</h3>
+<p>Status: Present; executed successfully (exit code 0)</p>
+<p>Evidence (from LOG): - Exit code: 0 - Stdout: no errors; script saves
+a pickle output (<code>alignment_result.pkl</code>) when run</p>
+<p>Rubric relevance: - Criterion 2, 3, 9, 11</p>
+<ul>
+<li>Clean run suggests good command-line/script structure and working
+I/O logic.</li>
+</ul>
+<p>Improvement suggestion: - Consider adding a short usage example to a
+per-week README so outputs and expected inputs are clear.</p>
+<hr />
+<h3 id="loops.py-missing">loops.py (missing)</h3>
+<p>Status: Missing (expected taught script)</p>
+<p>Evidence (from LOG): - Listed under “Missing taught (.py)” in
+expected scripts check</p>
+<p>Rubric relevance: - Criterion 2, 11</p>
+<ul>
+<li>Missing core taught exercises reduces visible evidence of
+progression and breadth.</li>
+</ul>
+<p>Improvement suggestion: - If the work exists under a different
+filename, rename to match expected scripts; otherwise add/restore the
+taught exercise file(s).</p>
+<hr />
+<h2 id="detailed-evaluation-tautocorr.r">Detailed Evaluation:
+TAutoCorr.R</h2>
+<h3 id="a.-specification-alignment-vs-script_metadata_json">A.
+Specification alignment (vs SCRIPT_METADATA_JSON)</h3>
+<ul>
+<li><p>Loads required dataset via relative path:
+<code>load("../data/KeyWestAnnualMeanTemperature.RData")</code></p></li>
+<li><p>Computes adjacent-year pairs: <code>x &lt;- temps[-n]</code> and
+<code>y &lt;- temps[-1]</code> (n-1 pairs)</p></li>
+<li><p>Uses <code>cor()</code> for observed correlation
+(<code>r_obs</code>)</p></li>
+<li><p>Performs permutation test by permuting the temperature series and
+recomputing lag-1 correlations (<code>nperm &lt;- 10000</code>)</p></li>
+<li><p>Computes empirical p-values from permutation distribution
+(one-sided and two-sided)</p></li>
+<li><p>Does <strong>not</strong> use <code>cor.test()</code> p-value as
+final inference</p></li>
+<li><p><strong>Matches</strong> the required workflow and statistical
+method in the metadata (correlation of successive-year pairs +
+permutation p-value).</p></li>
+</ul>
+<hr />
+<h3 id="b.-conceptual-understanding-of-autocorrelation">B. Conceptual
+understanding of autocorrelation</h3>
+<ul>
+<li><p>Explicitly frames the question as “Temp[t] vs Temp[t+1]”</p></li>
+<li><p>Breaks temporal order under the null using
+<code>sample(temps, replace = FALSE)</code></p></li>
+<li><p>Reports the observed lag-1 correlation and compares to
+permutation distribution</p></li>
+<li><p>Shows correct understanding that autocorrelation is about
+<strong>dependence across time lags</strong>, and that permutation
+provides an appropriate null for “no temporal structure”.</p></li>
+</ul>
+<hr />
+<h3 id="c.-algorithmic-implementation-depth-vs-example-solution">C.
+Algorithmic implementation depth (vs example solution)</h3>
+<ul>
+<li><p>Clear construction of lag-1 vectors (<code>temps[-n]</code>,
+<code>temps[-1]</code>)</p></li>
+<li><p>Stores permutation correlations in a preallocated numeric vector
+(<code>r_perm &lt;- numeric(nperm)</code>)</p></li>
+<li><p>Adds optional histogram plot + observed vertical line and
+label</p></li>
+<li><p>Includes basic robustness checks (<code>exists("ats")</code>, NA
+filtering, length check)</p></li>
+<li><p>Implementation is clean and efficient at bootcamp level
+(preallocation; no unnecessary recomputation).</p></li>
+<li><p>Vectorisation is used where appropriate; loop is acceptable and
+clear.</p></li>
+</ul>
+<hr />
+<h3 id="d.-statistical-computational-rigor">D. Statistical &amp;
+computational rigor</h3>
+<ul>
+<li>Uses Pearson correlation consistently via
+<code>cor(..., method="pearson")</code></li>
+<li>Computes empirical p-values as permutation tail probabilities:
+<ul>
+<li>One-sided: <code>mean(r_perm &gt;= r_obs)</code></li>
+<li>Two-sided: <code>mean(abs(r_perm) &gt;= abs(r_obs))</code></li>
+</ul></li>
+<li>This meets the “approximate p-value” requirement via
+permutation.</li>
+<li>One minor interpretation caveat: if reporting one-sided inference,
+it’s helpful to state the directionality assumption explicitly (you
+partly do).</li>
+</ul>
+<hr />
+<h3 id="e.-error-handling-robustness-criterion-8">E. Error handling
+&amp; robustness (Criterion 8)</h3>
+<ul>
+<li><p>Stops if <code>ats</code> object missing</p></li>
+<li><p>Removes NA values</p></li>
+<li><p>Stops if time series too short for lag-1</p></li>
+<li><p>Good bootcamp-appropriate guard clauses.</p></li>
+</ul>
+<hr />
+<h3 id="f.-comparison-with-example-solution">F. Comparison with example
+solution</h3>
+<h4 id="similarities">Similarities</h4>
+<ul>
+<li>Uses relative <code>load()</code> path to the provided
+<code>.RData</code></li>
+<li>Computes adjacent-year correlation via <code>cor()</code> on lagged
+vectors</li>
+<li>Builds a null distribution via permutation</li>
+</ul>
+<h4 id="key-omissions-relative-to-examplespec">Key omissions (relative
+to example/spec)</h4>
+<ul>
+<li>No dedicated function wrapper (example defines a function), though
+not strictly required if script is clear.</li>
+</ul>
+<h4 id="conceptual-gaps">Conceptual gaps</h4>
+<ul>
+<li>No major conceptual gaps detected for the
+autocorrelation/permutation core.</li>
+</ul>
+<h4 id="improvements-beyond-example-where-applicable">Improvements
+beyond example (where applicable)</h4>
+<ul>
+<li>More robust input checks (NA filtering, <code>exists()</code>
+guard)</li>
+<li>Saves both a text results summary and a diagnostic histogram
+PDF</li>
+<li>Uses larger permutation count (<code>nperm = 10000</code>) and sets
+a seed for reproducibility</li>
+</ul>
+<hr />
+<h2 id="problem-solving-evidence">Problem-solving evidence</h2>
+<p>Evidence (from LOG): - Many scripts run successfully across weeks 1–4
+(47/52 executed scripts succeed) - TAutoCorr permutation test is
+implemented clearly with appropriate null model logic - Several failures
+are “small fix” issues (one syntax typo; missing library import;
+hard-coded paths)</p>
+<ul>
+<li>Overall shows genuine engagement and working through multiple
+toolchains (bash, R, Python).</li>
+<li>Some portability/reproducibility habits (absolute paths; missing
+dependency notes) are still developing.</li>
+</ul>
+<hr />
+<h2 id="reporting-evidence">Reporting evidence</h2>
+<p>Evidence (from LOG): - Main <code>README.md</code> present but very
+short (2 non-empty lines) and no usage examples - No per-week READMEs
+detected - Many scripts include comments/docstrings (high documentation
+ratio reported), but narrative “how to run / what you got” is
+limited</p>
+<ul>
+<li>Strong inline commenting effort, but weak top-level reporting/usage
+documentation.</li>
+</ul>
+<hr />
+<h2 id="overall-feedback">Overall feedback</h2>
+<p><strong>What you did well</strong> - <strong>TAutoCorr.R is a strong
+highlight</strong>: correct lag construction, correct permutation null,
+clear p-value computation, reproducible seed, and sensible output
+outputs. - Good evidence of learning-by-doing across multiple scripts
+and languages, with many successful executions. - Commit message quality
+is good (no generic/empty messages flagged).</p>
+<p><strong>What to focus on next</strong> -
+<strong>Reproducibility/portability:</strong> remove absolute
+<code>setwd()</code> calls; always use relative paths; document
+dependencies (e.g., <code>numpy</code>) so validation environments can
+run your code. - <strong>Documentation:</strong> expand the main README
+(what’s in each week, how to run key scripts, expected outputs) and add
+brief per-week READMEs. - <strong>Tidyverse scripts:</strong> ensure
+required packages for <code>%&gt;%</code> are loaded explicitly. -
+<strong>Repo hygiene:</strong> extend <code>.gitignore</code> and avoid
+committing environments/outputs (e.g., <code>.venv</code>,
+<code>__pycache__</code>, large results folders) unless explicitly
+required.</p>
+<h2 id="priority-fixes">Priority fixes</h2>
+<ol type="1">
+<li>Remove hard-coded <code>setwd()</code> and replace with relative
+paths (<code>plotLin.R</code>).</li>
+<li>Fix trivial execution blockers:
+<ul>
+<li><code>PP_Regress_loc.R</code>: remove <code>..</code> typo in
+<code>read.csv</code></li>
+<li><code>MyBars.R</code>: load <code>%&gt;%</code> provider
+package</li>
+</ul></li>
+<li>Improve repo hygiene:
+<ul>
+<li>Expand <code>.gitignore</code> (R/Python caches, results, editor
+files)</li>
+<li>Remove committed <code>.venv</code>/generated outputs where
+possible</li>
+</ul></li>
+<li>Add per-week READMEs with “how to run” examples and expected
+outputs.</li>
+</ol>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>Great job. Your submission shows <strong>genuine engagement</strong>,
+with many scripts successfully executed. Main issues were
+<strong>missing expected scripts</strong>, <strong>documentation
+gaps</strong>, and <strong>repo hygiene/portability</strong> issues,
+plus relatively limited visible group contribution.</p>
+<h2 id="mark-classification">Mark classification</h2>
+<!-- Total Mark: 72/100   -->
+<p>Classification: Distinction</p>
+</body>
+</html>
